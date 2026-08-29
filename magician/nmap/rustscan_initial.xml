@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Wed Aug 26 19:58:05 2026 as: nmap -vvv -p 21,8080,8081 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.144.191 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 21,8080,8081 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.144.191" start="1787785085" startstr="Wed Aug 26 19:58:05 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="3" services="21,8080-8081"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1787785085"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.64.144.191" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1787785085" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1787785085"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1787785086"/>
+<taskbegin task="Connect Scan" time="1787785086"/>
+<taskend task="Connect Scan" time="1787785086" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1787785086"/>
+<taskend task="Service scan" time="1787785101" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1787785101"/>
+<taskend task="NSE" time="1787785102"/>
+<taskbegin task="NSE" time="1787785102"/>
+<taskend task="NSE" time="1787785103"/>
+<host starttime="1787785086" endtime="1787785103"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.64.144.191" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" product="vsftpd" version="2.0.8 or later" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache Tomcat" extrainfo="language: en" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat</cpe></service></port>
+<port protocol="tcp" portid="8081"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.14.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<times srtt="173939" rttvar="74200" to="470739"/>
+</host>
+<runstats><finished time="1787785103" timestr="Wed Aug 26 19:58:23 2026" summary="Nmap done at Wed Aug 26 19:58:23 2026; 1 IP address (1 host up) scanned in 18.38 seconds" elapsed="18.38" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,7 @@
+Can't load /etc/samba/smb.conf - run testparm to debug it
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	IPC$            IPC       IPC Service (ip-10-67-173-11 server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available

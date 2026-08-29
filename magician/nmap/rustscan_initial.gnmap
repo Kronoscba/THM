@@ -1,0 +1,5 @@
+# Nmap 7.991 scan initiated Wed Aug 26 19:58:05 2026 as: nmap -vvv -p 21,8080,8081 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.144.191
+# Ports scanned: TCP(3;21,8080-8081) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.64.144.191 ()	Status: Up
+Host: 10.64.144.191 ()	Ports: 21/open/tcp//ftp//vsftpd 2.0.8 or later/, 8080/open/tcp//http//Apache Tomcat (language: en)/, 8081/open/tcp//http//nginx 1.14.0 (Ubuntu)/
+# Nmap done at Wed Aug 26 19:58:23 2026 -- 1 IP address (1 host up) scanned in 18.38 seconds

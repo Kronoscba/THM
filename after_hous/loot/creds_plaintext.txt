@@ -1,0 +1,4 @@
+# Credenciales extraídas - After Hours (THM)
+# Contexto: Usuario backdoor creado por payload WMI persistence
+
+smb://patch:THM{P4tch_op3ned_th3_BacKd00r}@bytelotusdc:445 # Extraído de payload.exe (ConfigData -> AfterHours assembly), crea usuario via 'net user patch <pass> /add'

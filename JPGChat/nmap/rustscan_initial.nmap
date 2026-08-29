@@ -1,0 +1,12 @@
+# Nmap 7.991 scan initiated Wed Aug 26 21:04:52 2026 as: nmap -vvv -p 22 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.159.126
+Nmap scan report for 10.64.159.126
+Host is up, received conn-refused (0.18s latency).
+Scanned at 2026-08-26 21:04:53 -03 for 0s
+
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 26 21:04:53 2026 -- 1 IP address (1 host up) scanned in 1.73 seconds

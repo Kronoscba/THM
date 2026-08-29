@@ -1,0 +1,18 @@
+0:00:00:00 Starting a new session
+0:00:00:00 Loaded a total of 1 password hash
+0:00:00:00 Cost 1 (KDF/cipher [0=MD5/AES 1=MD5/3DES 2=Bcrypt/AES]) is 2 for all loaded hashes
+0:00:00:00 Cost 2 (iteration count) is 16 for all loaded hashes
+0:00:00:00 Command line: john --format=SSH --session=crack1 --wordlist=/usr/share/seclists/Passwords/Leaked-Databases/rockyou-50.txt content/ssh/id_rsa.hash 
+0:00:00:00 - UTF-8 input encoding enabled
+0:00:00:00 - Passwords will be stored UTF-8 encoded in .pot file
+0:00:00:00 Autotune found best speed at OMP scale of 1
+0:00:00:00 - Hash type: SSH (min-len 0, max-len 10 [worst case UTF-8] to 32 [ASCII])
+0:00:00:00 - Algorithm: RSA/DSA/EC/OPENSSH (SSH private keys) 32/64
+0:00:00:00 - Will reject candidates longer than 32 bytes
+0:00:00:00 - Candidate passwords will be buffered and tried in chunks of 32
+0:00:00:00 Proceeding with wordlist mode
+0:00:00:00 - Wordlist file: /usr/share/seclists/Passwords/Leaked-Databases/rockyou-50.txt
+0:00:00:00 - memory mapping wordlist (75911 bytes)
+0:00:00:00 - No word mangling rules
+0:00:00:00 - No stacked rules
+0:00:00:51 Session aborted

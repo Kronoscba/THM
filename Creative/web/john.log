@@ -1,0 +1,10 @@
+Using default input encoding: UTF-8
+Loaded 1 password hash (SSH [RSA/DSA/EC/OPENSSH (SSH private keys) 32/64])
+Cost 1 (KDF/cipher [0=MD5/AES 1=MD5/3DES 2=Bcrypt/AES]) is 2 for all loaded hashes
+Cost 2 (iteration count) is 16 for all loaded hashes
+Will run 4 OpenMP threads
+/-\|/-\|/-\|Note: This format may emit false positives, so it will keep trying even after
+finding a possible candidate.
+ Press 'q' or Ctrl-C to abort, almost any other key for status
+Wait...0g 0:00:06:23 37,53% (ETA: 16:03:59) 0g/s 9.342p/s 9.342c/s 9.342C/s underground..pink11
+Session aborted

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/usr/bin/pwncat-cs", line 3, in <module>
+    from pwncat.__main__ import main
+  File "/usr/lib/python3.14/site-packages/pwncat/__main__.py", line 11, in <module>
+    import pwncat.manager
+  File "/usr/lib/python3.14/site-packages/pwncat/manager.py", line 53, in <module>
+    import pwncat.facts
+  File "/usr/lib/python3.14/site-packages/pwncat/facts/__init__.py", line 19, in <module>
+    from pwncat.platform import PlatformError
+  File "/usr/lib/python3.14/site-packages/pwncat/platform/__init__.py", line 1034, in <module>
+    from pwncat.platform.linux import Linux  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/pwncat/platform/linux.py", line 26, in <module>
+    import pkg_resources
+ModuleNotFoundError: No module named 'pkg_resources'

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Quick nmap scan - top ports + service detection on Opacity target
+TARGET="10.66.172.242"
+mkdir -p nmap
+nmap -sC -sV -oN nmap/initial.txt $TARGET

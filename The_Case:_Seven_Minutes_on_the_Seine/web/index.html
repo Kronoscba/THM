@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation Notes - Detective Case File</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel: Questions -->
+        <div class="left-panel">
+            <div class="panel-header">
+                <h2>🔍 Investigation Questions</h2>
+                <div class="progress-indicator">
+                    <span id="current-question-num">1</span> / <span id="total-questions">5</span>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <div id="question-display" class="question-text">
+                    <!-- Question will be displayed here -->
+                </div>
+                
+                <div class="answer-input-container">
+                    <input 
+                        type="text"
+                        id="answer-input" 
+                        class="answer-input" 
+                        placeholder="Enter your answer here..."
+                    />
+                </div>
+                
+                <div class="button-group">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>← Previous</button>
+                    <button id="submit-answer-btn" class="btn btn-primary">Submit Answer</button>
+                    <button id="next-btn" class="btn btn-secondary" disabled>Next →</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Panel: Notes -->
+        <div class="right-panel">
+            <div class="panel-header">
+                <h2>📋 Case Notes</h2>
+                <div class="case-number" id="case-number">Case #0000</div>
+            </div>
+            
+            <div class="notes-container">
+                <div class="notes-paper">
+                    <div class="notes-header">
+                        <div class="notes-title">INVESTIGATION REPORT</div>
+                        <div class="notes-date" id="report-date"></div>
+                    </div>
+                    
+                    <div class="notes-content" id="notes-content">
+                        <!-- Note sections will be created dynamically from backend -->
+                    </div>
+                    
+                    <div class="notes-footer">
+                        <!-- Validation marks are now inline with each section -->
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Submit button always visible at bottom of right panel -->
+            <div class="submit-container-fixed" id="submit-container-fixed" style="display: none;">
+                <button id="submit-report-btn-fixed" class="btn btn-success btn-large">
+                    📤 Submit Investigation Report
+                </button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Congratulations/Results -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <div id="modal-success" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h2>Congratulations!</h2>
+                <p id="success-message-text">Loading success message...</p>
+                <button class="btn btn-primary" onclick="location.reload()">Start New Investigation</button>
+            </div>
+            <div id="modal-results" style="display: none;">
+                <h2>Investigation Results</h2>
+                <div id="results-content"></div>
+                <button class="btn btn-primary" onclick="closeModal()">Review Answers</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let answers = {};
+        let submitted = false;
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Fetch questions from backend
+            try {
+                const response = await fetch('/api/questions');
+                questions = await response.json();
+                
+                // Generate case number
+                const caseNumber = Math.floor(1000 + Math.random() * 9000);
+                document.getElementById('case-number').textContent = `Case #${caseNumber}`;
+                
+                document.getElementById('report-date').textContent = new Date().toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                // Update total questions display
+                document.getElementById('total-questions').textContent = questions.length;
+                
+                // Create note sections dynamically from backend questions
+                createNoteSections();
+                
+                // Set up navigation after sections are created
+                setupNavigation();
+                loadQuestion(0);
+                
+                // Initially disable all navigation
+                document.getElementById('prev-btn').disabled = true;
+                document.getElementById('next-btn').disabled = true;
+                
+                // Allow enter key to submit answer
+                document.getElementById('answer-input').addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        document.getElementById('submit-answer-btn').click();
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                alert('Error loading questions. Please refresh the page.');
+            }
+        });
+        
+        function createNoteSections() {
+            const notesContent = document.getElementById('notes-content');
+            notesContent.innerHTML = '';
+            
+            questions.forEach((q) => {
+                const section = document.createElement('div');
+                section.className = 'note-section';
+                section.setAttribute('data-field', q.field);
+                
+                const label = document.createElement('div');
+                label.className = 'note-label';
+                label.textContent = q.field + ':';
+                
+                const value = document.createElement('div');
+                value.className = 'note-value';
+                value.id = getNoteElementId(q.field);
+                value.innerHTML = '<span class="placeholder">[Awaiting answer...]</span>';
+                
+                section.appendChild(label);
+                section.appendChild(value);
+                notesContent.appendChild(section);
+            });
+        }
+        
+        function getNoteElementId(field) {
+            // Convert field name to a valid ID format
+            // Replace spaces with hyphens, remove special characters, convert to lowercase
+            return `note-${field.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`;
+        }
+        
+        function loadQuestion(index) {
+            if (index < 0 || index >= questions.length) return;
+            
+            currentQuestionIndex = index;
+            const question = questions[index];
+            
+            // Use textContent to preserve newlines, then set innerHTML to format properly
+            const questionDisplay = document.getElementById('question-display');
+            questionDisplay.textContent = question.question;
+            document.getElementById('current-question-num').textContent = index + 1;
+            document.getElementById('answer-input').value = answers[question.field] || '';
+            
+            // Update note sections - highlight current question section
+            questions.forEach((q, i) => {
+                const section = document.querySelector(`[data-field="${q.field}"]`);
+                if (i === index) {
+                    section.classList.add('current-question');
+                } else {
+                    section.classList.remove('current-question');
+                }
+            });
+            
+            // Update buttons - only enable previous if there are answered questions before
+            const hasAnsweredBefore = index > 0 && answers[questions[index - 1].field];
+            document.getElementById('prev-btn').disabled = !hasAnsweredBefore;
+            
+            // Next button is always disabled (can only proceed by submitting answer)
+            document.getElementById('next-btn').disabled = true;
+            
+            // Update note sections
+            updateNoteSections();
+            
+            // Show submit button if all answered
+            if (Object.keys(answers).length === questions.length) {
+                document.getElementById('submit-container-fixed').style.display = 'block';
+            } else {
+                document.getElementById('submit-container-fixed').style.display = 'none';
+            }
+        }
+        
+        function clearValidationMarks() {
+            // Don't clear validation marks - keep them visible
+            // Just restore clickability for all sections
+            questions.forEach(q => {
+                const noteSection = document.querySelector(`[data-field="${q.field}"]`);
+                noteSection.style.pointerEvents = 'auto';
+                noteSection.style.cursor = 'pointer';
+            });
+            // Allow resubmission after editing
+            submitted = false;
+        }
+        
+        function updateNoteSections() {
+            questions.forEach((q, index) => {
+                const noteElementId = getNoteElementId(q.field);
+                const noteElement = document.getElementById(noteElementId);
+                const section = document.querySelector(`[data-field="${q.field}"]`);
+                
+                if (answers[q.field]) {
+                    // Section has been answered - show the answer
+                    noteElement.innerHTML = answers[q.field];
+                    section.classList.remove('locked');
+                    section.classList.add('filled');
+                } else {
+                    // Section hasn't been answered yet
+                    noteElement.innerHTML = '<span class="placeholder">[Awaiting answer...]</span>';
+                    // Before submission, allow clicking on any section (even unanswered ones)
+                    // Only lock sections that are ahead of current question
+                    if (index <= currentQuestionIndex) {
+                        section.classList.remove('locked');
+                        section.classList.remove('filled');
+                    } else {
+                        section.classList.add('locked');
+                        section.classList.remove('filled');
+                    }
+                }
+            });
+        }
+        
+        // Set up navigation using note sections
+        function setupNavigation() {
+            // Handle clicks on note sections
+            document.querySelectorAll('.note-section').forEach((section) => {
+                section.addEventListener('click', function(e) {
+                    // Don't navigate if section is locked
+                    if (section.classList.contains('locked')) {
+                        return;
+                    }
+                    
+                    if (submitted) {
+                        // After submission, only allow clicking on wrong answers
+                        const hasIncorrectMark = section.querySelector('.incorrect-mark-inline');
+                        if (hasIncorrectMark) {
+                            const field = section.getAttribute('data-field');
+                            const question = questions.find(q => q.field === field);
+                            if (question) {
+                                const questionIndex = questions.indexOf(question);
+                                // Don't clear validation marks, just allow resubmission
+                                submitted = false;
+                                loadQuestion(questionIndex);
+                            }
+                        }
+                    } else {
+                        // Before submission, allow clicking on any non-locked section to navigate
+                        const field = section.getAttribute('data-field');
+                        const question = questions.find(q => q.field === field);
+                        if (question) {
+                            const questionIndex = questions.indexOf(question);
+                            loadQuestion(questionIndex);
+                        }
+                    }
+                });
+            });
+        }
+        
+        function updateNavigation() {
+            // This function now just updates the visual state of dots
+            // The click handlers are set up once via setupNavigation
+        }
+        
+        document.getElementById('submit-answer-btn').addEventListener('click', async function() {
+            const question = questions[currentQuestionIndex];
+            const answer = document.getElementById('answer-input').value.trim();
+            
+            if (!answer) {
+                alert('Please enter an answer before submitting.');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/submit-answer', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        question_id: question.id,
+                        answer: answer
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    answers[data.field] = answer;
+                    // Don't clear validation marks - keep them visible
+                    updateNoteSections();
+                    
+                    // Move to next question if available (only forward progression)
+                    if (currentQuestionIndex < questions.length - 1) {
+                        loadQuestion(currentQuestionIndex + 1);
+                    } else {
+                        document.getElementById('submit-container-fixed').style.display = 'block';
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting answer. Please try again.');
+            }
+        });
+        
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            // Only allow going back if previous question is answered
+            if (currentQuestionIndex > 0 && answers[questions[currentQuestionIndex - 1].field]) {
+                loadQuestion(currentQuestionIndex - 1);
+            }
+        });
+        
+        // Next button is always disabled - users must submit answer to proceed
+        document.getElementById('next-btn').addEventListener('click', function() {
+            // This should never be enabled, but just in case
+            if (currentQuestionIndex < questions.length - 1) {
+                loadQuestion(currentQuestionIndex + 1);
+            }
+        });
+        
+        // Handle submit button
+        document.getElementById('submit-report-btn-fixed').addEventListener('click', function() {
+            if (Object.keys(answers).length < questions.length) {
+                alert('Please answer all questions before submitting the report.');
+                return;
+            }
+            
+            submitReport();
+        });
+        
+        async function submitReport() {
+            try {
+                const response = await fetch('/api/submit-report', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ answers: answers })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    submitted = true;
+                    showResults(data);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting report. Please try again.');
+            }
+        }
+        
+        async function showResults(data) {
+            if (data.all_correct) {
+                // Only show modal if all answers are correct
+                const modal = document.getElementById('result-modal');
+                const successDiv = document.getElementById('modal-success');
+                const resultsDiv = document.getElementById('modal-results');
+                const successMessageText = document.getElementById('success-message-text');
+                
+                // Remove all validation marks when all correct
+                questions.forEach(q => {
+                    const noteSection = document.querySelector(`[data-field="${q.field}"]`);
+                    const existingMark = noteSection.querySelector('.validation-mark-inline');
+                    if (existingMark) {
+                        existingMark.remove();
+                    }
+                    noteSection.classList.remove('validated-correct', 'validated-incorrect', 'current-question');
+                    noteSection.style.pointerEvents = 'none';
+                    noteSection.style.cursor = 'default';
+                });
+                
+                // Fetch success message from backend (includes flag)
+                try {
+                    const response = await fetch('/api/success-message');
+                    const messageData = await response.json();
+                    successMessageText.textContent = messageData.message;
+                } catch (error) {
+                    console.error('Error fetching success message:', error);
+                    // Fallback to message from response if available
+                    if (data.success_message) {
+                        successMessageText.textContent = data.success_message;
+                    } else {
+                        successMessageText.textContent = 'Congratulations! You have successfully completed the challenge!';
+                    }
+                }
+                
+                successDiv.style.display = 'block';
+                resultsDiv.style.display = 'none';
+                modal.style.display = 'block';
+            } else {
+                // Show validation marks inline with each section (no modal)
+                questions.forEach(q => {
+                    const result = data.results[q.field];
+                    const noteSection = document.querySelector(`[data-field="${q.field}"]`);
+                    const noteValue = document.getElementById(getNoteElementId(q.field));
+                    
+                    // Remove any existing validation marks first
+                    const existingMark = noteSection.querySelector('.validation-mark-inline');
+                    if (existingMark) {
+                        existingMark.remove();
+                    }
+                    
+                    // Remove validation classes
+                    noteSection.classList.remove('validated-correct', 'validated-incorrect', 'current-question');
+                    
+                    if (result.correct) {
+                        noteSection.classList.add('validated-correct');
+                        // Add checkmark inline
+                        const checkMark = document.createElement('span');
+                        checkMark.className = 'validation-mark-inline correct-mark-inline';
+                        checkMark.textContent = '✓';
+                        noteSection.querySelector('.note-label').appendChild(checkMark);
+                        // Make correct sections non-clickable after submission
+                        noteSection.style.pointerEvents = 'none';
+                        noteSection.style.cursor = 'default';
+                    } else {
+                        noteSection.classList.add('validated-incorrect');
+                        // Add X mark inline aligned with section
+                        const xMark = document.createElement('span');
+                        xMark.className = 'validation-mark-inline incorrect-mark-inline';
+                        xMark.textContent = '✗';
+                        noteSection.querySelector('.note-label').appendChild(xMark);
+                        // Only incorrect sections remain clickable after submission
+                        noteSection.style.pointerEvents = 'auto';
+                        noteSection.style.cursor = 'pointer';
+                    }
+                });
+            }
+        }
+        
+        function closeModal() {
+            document.getElementById('result-modal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('result-modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

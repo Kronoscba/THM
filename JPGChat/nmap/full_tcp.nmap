@@ -1,0 +1,25 @@
+# Nmap 7.991 scan initiated Wed Aug 26 21:05:02 2026 as: nmap -p- -sV -T4 -Pn --min-rate 5000 -oA nmap/full_tcp 10.64.159.126
+Warning: 10.64.159.126 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.64.159.126
+Host is up (0.17s latency).
+Not shown: 65478 closed tcp ports (conn-refused), 55 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+3000/tcp open  ppp?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.991%I=7%D=8/26%Time=6A8F7F4A%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,E2,"Welcome\x20to\x20JPChat\nthe\x20source\x20code\x20of\x20this\x2
+SF:0service\x20can\x20be\x20found\x20at\x20our\x20admin's\x20github\nMESSA
+SF:GE\x20USAGE:\x20use\x20\[MESSAGE\]\x20to\x20message\x20the\x20\(current
+SF:ly\)\x20only\x20channel\nREPORT\x20USAGE:\x20use\x20\[REPORT\]\x20to\x2
+SF:0report\x20someone\x20to\x20the\x20admins\x20\(with\x20proof\)\n")%r(Ge
+SF:nericLines,E2,"Welcome\x20to\x20JPChat\nthe\x20source\x20code\x20of\x20
+SF:this\x20service\x20can\x20be\x20found\x20at\x20our\x20admin's\x20github
+SF:\nMESSAGE\x20USAGE:\x20use\x20\[MESSAGE\]\x20to\x20message\x20the\x20\(
+SF:currently\)\x20only\x20channel\nREPORT\x20USAGE:\x20use\x20\[REPORT\]\x
+SF:20to\x20report\x20someone\x20to\x20the\x20admins\x20\(with\x20proof\)\n
+SF:");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 26 21:05:31 2026 -- 1 IP address (1 host up) scanned in 29.33 seconds

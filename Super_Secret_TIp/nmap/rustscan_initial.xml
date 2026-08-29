@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Fri Aug 28 07:02:53 2026 as: nmap -vvv -p 22 -4 -sV -T3 -oA nmap/rustscan_initial 10.67.176.248 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 22 -4 -sV -T3 -oA nmap/rustscan_initial 10.67.176.248" start="1787911373" startstr="Fri Aug 28 07:02:53 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="22"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1787911373"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.67.176.248" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1787911374" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1787911374"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1787911374"/>
+<taskbegin task="Connect Scan" time="1787911374"/>
+<taskend task="Connect Scan" time="1787911374" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1787911374"/>
+<taskend task="Service scan" time="1787911375" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1787911375"/>
+<taskend task="NSE" time="1787911375"/>
+<taskbegin task="NSE" time="1787911375"/>
+<taskend task="NSE" time="1787911375"/>
+<host starttime="1787911374" endtime="1787911375"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.67.176.248" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.7" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<times srtt="179822" rttvar="134966" to="719686"/>
+</host>
+<runstats><finished time="1787911375" timestr="Fri Aug 28 07:02:55 2026" summary="Nmap done at Fri Aug 28 07:02:55 2026; 1 IP address (1 host up) scanned in 1.67 seconds" elapsed="1.67" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

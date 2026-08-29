@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Wed Aug 26 17:41:45 2026 as: nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.132.157 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.132.157" start="1787776905" startstr="Wed Aug 26 17:41:45 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1787776905"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.64.132.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1787776905" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1787776905"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1787776906"/>
+<taskbegin task="Connect Scan" time="1787776906"/>
+<taskend task="Connect Scan" time="1787776906" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1787776906"/>
+<taskend task="Service scan" time="1787776913" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1787776913"/>
+<taskend task="NSE" time="1787776913"/>
+<taskbegin task="NSE" time="1787776913"/>
+<taskend task="NSE" time="1787776914"/>
+<host starttime="1787776906" endtime="1787776914"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.64.132.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="9.6p1 Ubuntu 3ubuntu13.18" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:9.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Gunicorn" method="probed" conf="10"><cpe>cpe:/a:gunicorn:gunicorn</cpe></service></port>
+</ports>
+<times srtt="173748" rttvar="98906" to="569372"/>
+</host>
+<runstats><finished time="1787776914" timestr="Wed Aug 26 17:41:54 2026" summary="Nmap done at Wed Aug 26 17:41:54 2026; 1 IP address (1 host up) scanned in 9.24 seconds" elapsed="9.24" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

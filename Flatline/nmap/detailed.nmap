@@ -1,0 +1,26 @@
+# Nmap 7.991 scan initiated Thu Aug 27 11:53:33 2026 as: nmap -sC -Nmap scan report for 10.65.178.236
+Host is up (0.18s latency).
+
+PORT     STATE SERVICE          VERSION
+3389/tcp open  ms-wbt-server    Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: WIN-EOM4PK0578N
+|   NetBIOS_Domain_Name: WIN-EOM4PK0578N
+|   NetBIOS_Computer_Name: WIN-EOM4PK0578N
+|   DNS_Domain_Name: WIN-EOM4PK0578N
+|   DNS_Computer_Name: WIN-EOM4PK0578N
+|   Product_Version: 10.0.17763
+|_  System_Time: 2026-08-27T14:52:59+00:00
+|_ssl-date: 2026-08-27T14:53:04+00:00; -43s from scanner time.
+| ssl-cert: Subject: commonName=WIN-EOM4PK0578N
+| Not valid before: 2026-08-26T14:34:05
+|_Not valid after:  2027-02-25T14:34:05
+8021/tcp open  freeswitch-event FreeSWITCH mod_event_socket
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -43s, deviation: 0s, median: -44s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.04 seconds
+p done at Thu Aug 27 11:53:47 2026 -- 1 IP address (1 host up) scanned in 14.04 seconds

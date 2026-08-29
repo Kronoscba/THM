@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Assistant</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css.css"
+    />
+    <script src="/static/main.js"></script>
+  </head>
+
+  <body class="bg-thm-900 text-gray-100 h-full overflow-hidden flex flex-col">
+    <header
+      class="border-b border-thm-800 bg-thm-900/50 backdrop-blur-xl fixed w-full z-50"
+    >
+      <nav class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center justify-between w-full">
+            <div class="flex items-center space-x-4">
+              <div class="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-teal-500"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <div>
+                  <span
+                    class="text-2xl font-bold bg-gradient-to-r from-teal-500 to-blue-500 text-transparent bg-clip-text"
+                    > AI </span
+                  >
+                  <div class="text-xs text-thm-400">
+                     Assistant
+                  </div>
+                </div>
+              </div>
+              <div class="h-8 w-px bg-thm-800"></div>
+              <div class="flex items-center space-x-2 text-xs">
+                <span
+                  class="px-2 py-1 rounded-md bg-thm-800/50 border border-thm-700"
+                  >v1.0.0</span
+                >
+                <span
+                  class="px-2 py-1 rounded-md bg-thm-800/50 border border-thm-700"
+                  >PROD</span
+                >
+              </div>
+            </div>
+            <div class="flex items-center space-x-4 mix-blend-hard-light">
+              <div class="text-xs text-thm-100 flex items-center">
+                <span
+                  class="inline-block w-2 h-2 bg-teal-500 rounded-full mr-2 animate-pulse"
+                ></span>
+                <div class="flex flex-col items-end">
+                  <span>System Status: Online</span>
+                  <span class="text-thm-400 text-[10px]"
+                    >Last check: <span id="last-check">Just now</span></span
+                  >
+                </div>
+              </div>
+              <button
+                class="text-thm-400 hover:text-white transition-colors"
+                title="Settings"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Quick Actions Bar -->
+      <div class="border-b border-thm-800/10">
+        <div
+          class="px-8 py-3 flex items-center justify-between max-w-4xl mx-auto"
+        >
+          
+            
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 container mx-auto max-w-3xl mt-0 flex flex-col h-full">
+      <div
+        class="bg-thm-900 rounded-lg overflow-hidden flex-1 flex flex-col relative"
+      >
+        <!-- Security watermark -->
+        <div
+          class="absolute inset-0 pointer-events-none opacity-[0.02] flex items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-96 h-96"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+
+        <!-- Toast container -->
+        <div
+          id="toast-container"
+          class="fixed bottom-4 right-4 z-50 pointer-events-none gap-y-2 flex flex-col items-end"
+        ></div>
+
+        <div id="chatbox-holder" class="flex-1 overflow-y-auto pt-32 px-8">
+          <div id="chatbox" class="space-y-6 mb-6"></div>
+          <div id="bot-thinking" class="hidden">
+            <div class="flex items-center space-x-2 px-4">
+              <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
+              <div
+                class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"
+                style="animation-delay: 0.2s"
+              ></div>
+              <div
+                class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"
+                style="animation-delay: 0.4s"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-thm-800 p-4 bg-thm-900/50 backdrop-blur-xl">
+          <div class="flex space-x-4 items-start">
+            <textarea
+              name="text"
+              id="text"
+              rows="2"
+              class="flex-1 bg-thm-800 text-gray-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-500/50 placeholder-thm-400 resize-none overflow-hidden min-h-[52px]"
+              placeholder="Ask about the flag! (Shift+↵ for new line)"
+              autocomplete="off"
+            ></textarea>
+            <button
+              type="button"
+              id="submit-button"
+              class="bg-gradient-to-r from-teal-500 to-blue-500 hover:opacity-90 text-white font-semibold px-6 h-[72px] rounded-lg transition-all flex-shrink-0 flex items-center justify-center"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

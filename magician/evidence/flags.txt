@@ -1,0 +1,7 @@
+# TryHackMe - Magician
+# User flag (en /home/magician/user.txt, vía reverse shell):
+THM{simsalabim_hex_hex}
+
+# Root flag (/root/root.txt, leída vía servicio interno :6666 "The Magic cat"):
+#   raw (base64): VEhNe21hZ2ljX21heV9tYWtlX21hbnlfbWVuX21hZH0K
+THM{magic_may_make_many_men_mad}

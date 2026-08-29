@@ -1,0 +1,4 @@
+# Nmap 7.991 scan initiated Thu Aug 27 11:53:33 2026 as: nmap -sC -sV -Pn -T4 -p 3389,8021 -oA nmap/detailed 10.65.178.236
+Host: 10.65.178.236 ()	Status: Up
+Host: 10.65.178.236 ()	Ports: 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/, 8021/open/tcp//freeswitch-event//FreeSWITCH mod_event_socket/
+# Nmap done at Thu Aug 27 11:53:47 2026 -- 1 IP address (1 host up) scanned in 14.04 seconds

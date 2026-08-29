@@ -1,0 +1,10 @@
+admin
+root
+user
+test
+demo
+guest
+nahamstore
+store
+operator
+webadmin

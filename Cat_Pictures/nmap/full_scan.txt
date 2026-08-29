@@ -1,0 +1,14 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-07 01:41 -0300
+Nmap scan report for 10.66.171.218
+Host is up (0.18s latency).
+Not shown: 65534 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 e3:11:2f:ac:12:07:91:59:40:58:cd:e1:0f:fd:5d:0b (RSA)
+|   256 c0:ef:5f:0a:be:88:46:3d:39:c7:d6:2b:cd:d9:6d:8e (ECDSA)
+|_  256 3a:3a:ce:78:67:f7:ca:f2:6b:0a:44:13:f0:08:3c:e3 (ED25519)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 73.10 seconds

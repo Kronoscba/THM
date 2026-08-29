@@ -1,0 +1,16 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-06-26 17:59 -0300
+Nmap scan report for 10.67.129.124
+Host is up (0.17s latency).
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 91:45:07:64:c6:46:b3:e3:9d:9f:24:69:c0:00:66:67 (ECDSA)
+|_  256 b7:6a:b1:ee:57:d2:f5:70:b9:37:42:17:5b:5e:49:29 (ED25519)
+80/tcp open  http    Werkzeug httpd 3.0.1 (Python 3.11.14)
+|_http-title: Investigation Notes - Detective Case File
+|_http-server-header: Werkzeug/3.0.1 Python/3.11.14
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 80.49 seconds

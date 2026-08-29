@@ -1,0 +1,6 @@
+anonymous
+root
+admin
+user
+guest
+anon

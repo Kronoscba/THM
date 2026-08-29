@@ -1,0 +1,5 @@
+2026/08/29 04:59:43 server: Reverse tunnelling enabled
+2026/08/29 04:59:43 server: Fingerprint LxhG3GBnM8P6R0lw9gJUHGt2FnjFa0BabElxnmOJBxk=
+2026/08/29 04:59:43 server: Listening on http://0.0.0.0:4444
+2026/08/29 05:00:25 server: session#1: Open (user=- addr=10.66.149.92:43748 remotes=R:127.0.0.1:1080:socks)
+2026/08/29 05:00:25 server: session#1: tun: proxy#R:127.0.0.1:1080=>socks: Listening

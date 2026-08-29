@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Fri Aug 28 01:04:50 2026 as: nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.172.157 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.172.157" start="1787889890" startstr="Fri Aug 28 01:04:50 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1787889890"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.64.172.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1787889890" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1787889890"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1787889891"/>
+<taskbegin task="Connect Scan" time="1787889891"/>
+<taskend task="Connect Scan" time="1787889891" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1787889891"/>
+<taskend task="Service scan" time="1787889899" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1787889899"/>
+<taskend task="NSE" time="1787889900"/>
+<taskbegin task="NSE" time="1787889900"/>
+<taskend task="NSE" time="1787889901"/>
+<host starttime="1787889891" endtime="1787889901"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.64.172.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.5" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rtsp" servicefp="SF-Port80-TCP:V=7.991%I=7%D=8/28%Time=6A9108EA%P=x86_64-pc-linux-gnu%r(GetRequest,B15,&quot;HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x202756\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;\x20/&gt;\n\x20\x20\x20\x20&lt;meta\n\x20\x20\x20\x20\x20\x20name=\&quot;viewport\&quot;\n\x20\x20\x20\x20\x20\x20content=\&quot;width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\&quot;\n\x20\x20\x20\x20/&gt;\n\n\x20\x20\x20\x20&lt;link\n\x20\x20\x20\x20\x20\x20rel=\&quot;stylesheet\&quot;\n\x20\x20\x20\x20\x20\x20href=\&quot;\.\./static/css/bootstrap\.min\.css\&quot;\n\x20\x20\x20\x20\x20\x20crossorigin=\&quot;anonymous\&quot;\n\x20\x20\x20\x20/&gt;\n\x20\x20\x20\x20&lt;link\n\x20\x20\x20\x20\x20\x20rel=\&quot;stylesheet\&quot;\n\x20\x20\x20\x20\x20\x20href=\&quot;\.\./static/css/font-awesome\.min\.css\&quot;\n\x20\x20\x20\x20\x20\x20crossorigin=\&quot;anonymous\&quot;\n\x20\x20\x20\x20/&gt;\n\x20\x20\x20\x20&lt;link\n\x20\x20\x20\x20\x20\x20rel=\&quot;stylesheet\&quot;\n\x20\x20\x20\x20\x20\x20href=\&quot;\.\./static/css/bootstrap-datepicker\.min\.css\&quot;\n\x20\x20\x20\x20\x20\x20crossorigin=\&quot;anonymous\&quot;\n\x20\x20\x20\x20/&gt;\n\x20\x20\x20\x20&lt;title&gt;Prioritise&lt;/title&gt;\n\x20\x20&lt;/head&gt;\n\n\x20\x20&lt;body&gt;\n\x20\x20\x20\x20&lt;!-&#45;\x20Navigation\x20-&#45;&gt;\n\x20\x20\x20\x20&lt;nav\x20class=\&quot;navbar\x20navbar-expand-md\x20navbar-dark\x20bg-dark\&quot;&gt;\n\x20\x20\x20\x20\x20\x20&lt;div\x20class=\&quot;container\&quot;&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;a\x20class=\&quot;navbar-brand\&quot;\x20href=\&quot;/\&quot;&gt;&lt;span\x20class=\&quot;\&quot;&gt;Prioritise&lt;/span&gt;&lt;/a&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;button\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20class=\&quot;na&quot;)%r(HTTPOptions,69,&quot;HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAllow:\x20HEAD,\x20GET,\x20OPTIONS\r\nContent-Length:\x200\r\n\r\n&quot;)%r(RTSPRequest,69,&quot;RTSP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAllow:\x20HEAD,\x20GET,\x20OPTIONS\r\nContent-Length:\x200\r\n\r\n&quot;)%r(FourOhFourRequest,13F,&quot;HTTP/1\.0\x20404\x20NOT\x20FOUND\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20232\r\n\r\n&lt;!DOCTYPE\x20HTML\x20PUBLIC\x20\&quot;-//W3C//DTD\x20HTML\x203\.2\x20Final//EN\&quot;&gt;\n&lt;title&gt;404\x20Not\x20Found&lt;/title&gt;\n&lt;h1&gt;Not\x20Found&lt;/h1&gt;\n&lt;p&gt;The\x20requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20manually\x20please\x20check\x20your\x20spelling\x20and\x20try\x20again\.&lt;/p&gt;\n&quot;);" method="probed" conf="10"/></port>
+</ports>
+<times srtt="171594" rttvar="96608" to="558026"/>
+</host>
+<runstats><finished time="1787889901" timestr="Fri Aug 28 01:05:01 2026" summary="Nmap done at Fri Aug 28 01:05:01 2026; 1 IP address (1 host up) scanned in 10.82 seconds" elapsed="10.82" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,17 @@
+# Nmap 7.991 scan initiated Thu Aug 27 16:08:22 2026 as: nmap -sC -sV -T4 -Pn --min-rate 3000 -p 22,80 -oA nmap/detailed 10.66.171.53
+Nmap scan report for 10.66.171.53
+Host is up (0.17s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 9f:a6:01:53:92:3a:1d:ba:d7:18:18:5c:0d:8e:92:2c (RSA)
+|   256 4b:60:dc:fb:92:a8:6f:fc:74:53:64:c1:8c:bd:de:7c (ECDSA)
+|_  256 83:d4:9c:d0:90:36:ce:83:f7:c7:53:30:28:df:c3:d5 (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: RecruitSec: Industry Leading Infosec Recruitment
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug 27 16:08:35 2026 -- 1 IP address (1 host up) scanned in 13.48 seconds

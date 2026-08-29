@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../static/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="../static/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="../static/css/bootstrap-datepicker.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Prioritise</title>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/"><span class="">Prioritise</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto"></ul>
+        </div>
+      </div>
+    </nav>
+
+    
+
+<!-- Page Content -->
+<div class="container">
+   
+
+  <div class="row mt-5">
+    <div class="col-md-12">
+      
+      <div class="card">
+        <div class="card-header">
+          <div class="d-flex justify-content-between">
+            <div>Your todo list</div>
+            <div>
+              <form action="/" method="get">
+                <select
+                  onchange="this.form.submit()"
+                  name="order"
+                  style="width: auto"
+                  class="form-select form-select-sm"
+                  aria-label=".form-select-sm example"
+                >
+                  <option selected value="">Sort by</option>
+                  <option value="title">Title</option>
+                  <option value="done">Done</option>
+                  <option value="date">Due Date</option>
+                </select>
+              </form>
+            </div>
+          </div>
+        </div>
+        <table class="table mb-0">
+          <thead></thead>
+          <tbody>
+            
+            <tr>
+              <td style="width: 5%" scope="row">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  
+                />
+              </td>
+              <td
+                
+              >
+                AAAA
+              </td>
+              <td
+                style="width: 10%"
+                
+              >
+                2999-12-31
+              </td>
+              <td style="width: 10%">
+                <a
+                  class="btn btn-danger btn-sm"
+                  href="/delete/2"
+                  role="button"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <td style="width: 5%" scope="row">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  
+                />
+              </td>
+              <td
+                
+              >
+                ZZZZ
+              </td>
+              <td
+                style="width: 10%"
+                
+              >
+                1900-01-01
+              </td>
+              <td style="width: 10%">
+                <a
+                  class="btn btn-danger btn-sm"
+                  href="/delete/3"
+                  role="button"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            
+            <tr>
+              <td style="width: 5%" scope="row">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  
+                />
+              </td>
+              <td
+                
+              >
+                alpha
+              </td>
+              <td
+                style="width: 10%"
+                
+              >
+                2026-09-01
+              </td>
+              <td style="width: 10%">
+                <a
+                  class="btn btn-danger btn-sm"
+                  href="/delete/1"
+                  role="button"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="card mt-3">
+        <div class="card-header">Add a new item</div>
+        <form class="m-3" action="/new" method="post">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Title"
+              aria-label="Title"
+              name="title"
+              aria-describedby="basic-addon1"
+              required
+            />
+          </div>
+          <div class="input-group date" id="datepicker">
+            <input type="text" name="date" class="form-control" id="date" />
+            <span class="input-group-append">
+              <span class="input-group-text bg-light d-block">
+                <i class="fa fa-calendar"></i>
+              </span>
+            </span>
+          </div>
+          <button class="btn btn-primary mt-3" type="submit">Add item</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
+
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap-datepicker.min.js"></script>
+    <script>
+      $(function () {
+        $("#datepicker").datepicker()
+      })
+    </script>
+  </body>
+</html>

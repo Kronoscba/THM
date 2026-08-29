@@ -1,0 +1,5 @@
+Ncat: Version 7.991 ( https://nmap.org/ncat )
+Ncat: Listening on [::]:4444
+Ncat: Listening on 0.0.0.0:4444
+Ncat: Connection from 10.66.149.92:40808.
+web@tryhackme-2404:/var/www/infinity_pool/edge$ 

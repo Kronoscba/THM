@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Thu Aug 27 11:53:33 2026 as: nmap -sC -sV -Pn -T4 -p 3389,8021 -oA nmap/detailed 10.65.178.236 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -Pn -T4 -p 3389,8021 -oA nmap/detailed 10.65.178.236" start="1787842413" startstr="Thu Aug 27 11:53:33 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="3389,8021"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1787842414" endtime="1787842427"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.65.178.236" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: WIN-EOM4PK0578N&#xa;  NetBIOS_Domain_Name: WIN-EOM4PK0578N&#xa;  NetBIOS_Computer_Name: WIN-EOM4PK0578N&#xa;  DNS_Domain_Name: WIN-EOM4PK0578N&#xa;  DNS_Computer_Name: WIN-EOM4PK0578N&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2026-08-27T14:52:59+00:00"><elem key="Target_Name">WIN-EOM4PK0578N</elem>
+<elem key="NetBIOS_Domain_Name">WIN-EOM4PK0578N</elem>
+<elem key="NetBIOS_Computer_Name">WIN-EOM4PK0578N</elem>
+<elem key="DNS_Domain_Name">WIN-EOM4PK0578N</elem>
+<elem key="DNS_Computer_Name">WIN-EOM4PK0578N</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2026-08-27T14:52:59+00:00</elem>
+</script><script id="ssl-date" output="2026-08-27T14:53:04+00:00; -43s from scanner time."><elem key="delta">-43.0</elem>
+<elem key="date">2026-08-27T14:53:04+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=WIN-EOM4PK0578N&#xa;Not valid before: 2026-08-26T14:34:05&#xa;Not valid after:  2027-02-25T14:34:05"><table key="subject">
+<elem key="commonName">WIN-EOM4PK0578N</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">WIN-EOM4PK0578N</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">D890BE4C399281F745A574C645608EF6454751102A7776BC41CD7326B35778CE94548D5AABD53FE99D755766F05438645CC9081ECE8D420AA53DDED25A691815A3DE2BC4E3A7C13A98170B61E4AE1CB3FC2AB7672BA83E1E17F2DC48927C29A4044779B9346927DA62FC51FA372C8C0A61D986529F27D8C3B12FF1AE8951482052FBAE079155741460A2484E521B71C73710217F185FF00D0A6CBDF0FD06BE27617B2394907AAF0BDDBB50F8564E30F62F115BB92B323AC2AF3C53D7D55E533C6A2F31184E21A74923372DE1870AFC35FBD917D3E8D9D7CAD7197D652831681DE976AF020E8688A2A4A5A9DB0C44AA8AC90BCA523033C41AC613379F42509701</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-08-26T14:34:05</elem>
+<elem key="notAfter">2027-02-25T14:34:05</elem>
+</table>
+<elem key="md5">2cde024693def9e6d97448a03e2ae026</elem>
+<elem key="sha1">fdca869b11e64767c60a2d250323849b16eb6db1</elem>
+<elem key="sha256">c49c4fb947e9bd14ce4241231a39fe3432daf7ac1b002d1833a60a5cccc6685e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC4jCCAcqgAwIBAgIQUfhuhWyxNaRJ8NfkxF7l5zANBgkqhkiG9w0BAQsFADAa&#xa;MRgwFgYDVQQDEw9XSU4tRU9NNFBLMDU3OE4wHhcNMjYwODI2MTQzNDA1WhcNMjcw&#xa;MjI1MTQzNDA1WjAaMRgwFgYDVQQDEw9XSU4tRU9NNFBLMDU3OE4wggEiMA0GCSqG&#xa;SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDYkL5MOZKB90WldMZFYI72RUdRECp3drxB&#xa;zXMms1d4zpRUjVqr1T/pnXVXZvBUOGRcyQgezo1CCqU93tJaaRgVo94rxOOnwTqY&#xa;Fwth5K4cs/wqt2crqD4eF/LcSJJ8KaQER3m5NGkn2mL8Ufo3LIwKYdmGUp8n2MOx&#xa;L/GuiVFIIFL7rgeRVXQUYKJITlIbccc3ECF/GF/wDQpsvfD9Br4nYXsjlJB6rwvd&#xa;u1D4Vk4w9i8RW7krMjrCrzxT19VeUzxqLzEYTiGnSSM3LeGHCvw1+9kX0+jZ18rX&#xa;GX1lKDFoHel2rwIOhoiipKWp2wxEqorJC8pSMDPEGsYTN59CUJcBAgMBAAGjJDAi&#xa;MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsF&#xa;AAOCAQEAH7R1tumw4jrLTgIcm4NEEaudCCqMUbY/Y1nsLgTpUDnLawx0NBL81vFg&#xa;R1UL4qCWmGIAOZEVHySuEajWVzdjIDTC09Ucbew763gd1HuyGBFaHPtR4AyoSOVl&#xa;/Rb6frpZnnC66VqN87Fmvvi+GilB3q+cpzLLnmMDAZyXTbhbvpZOTxbLVfKwt3X1&#xa;vCBXIGNgpW8FKJXPmYrvf3M/UZxJmO76vEaXTgcdS0+OT5tTZXRJbQiAKPxu7TcO&#xa;WbnOD8rR42FEAui+QalgEsUwWSOl9hx05u38c5L42KDG+EckpnwWrJBjouBV9AQE&#xa;a56bwSWv9Uw/H3iYKYgmd+kK9/K4eA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="8021"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="freeswitch-event" product="FreeSWITCH mod_event_socket" method="probed" conf="10"><cpe>cpe:/a:freeswitch:freeswitch</cpe></service></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: -43s, deviation: 0s, median: -44s"><elem key="median">-44</elem>
+<elem key="stddev">0</elem>
+<elem key="count">2</elem>
+<elem key="mean">-43</elem>
+</script></hostscript><times srtt="179759" rttvar="134837" to="719107"/>
+</host>
+<runstats><finished time="1787842427" timestr="Thu Aug 27 11:53:47 2026" summary="Nmap done at Thu Aug 27 11:53:47 2026; 1 IP address (1 host up) scanned in 14.04 seconds" elapsed="14.04" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

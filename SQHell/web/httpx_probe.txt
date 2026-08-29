@@ -1,0 +1,1 @@
+http://10.67.179.8 [[32m200[0m] [[36mHome[0m] [[35mBootstrap:3.3.7,BootstrapCDN:3.3.7,Google Hosted Libraries,Nginx:1.18.0,Ubuntu,jQuery:3.5.1[0m]

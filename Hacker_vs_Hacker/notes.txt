@@ -1,0 +1,6 @@
+Room 'Hacker vs Hacker' PWNED:
+- Web shell: /cvs/shell.pdf.php (www-data) - filtro .pdf bypass (shell.pdf.php)
+- user lachlan:thisistheway123 (de .bash_history)
+- privesc: /etc/cron.d/persistence corre como root con PATH=/home/lachlan/bin primero y llama a pkill sin ruta -> reemplaze /home/lachlan/bin/pkill por un script que crea /tmp/rootbash SUID root
+- trigger: el cron ejecuta pkill cuando hay entrada en /dev/pts (echo nope > /dev/pts/ptmx succeed como root)
+- root: /tmp/rootbash -p (SUID bash; www-data no lo ve por PrivateTmp de apache)

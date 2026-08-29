@@ -1,0 +1,2 @@
+todos: id INTEGER NOT NULL, title VARCHAR(40), done BOOLEAN, date  (4 cols; filas = tareas visibles, se resetean)
+flag : 1 tabla (nombre rota xlag|flag), 1 col 'flag', 1 fila -> flag{65f2f8cfd53d59422f3d7cc62cc8fdcd}

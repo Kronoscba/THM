@@ -1,0 +1,10 @@
+# Nmap 7.991 scan initiated Fri Aug 28 07:54:22 2026 as: nmap -p- -T4 --open -oN nmap/full_tcp.txt 10.67.176.248
+Nmap scan report for 10.67.176.248
+Host is up (0.18s latency).
+Not shown: 64955 closed tcp ports (conn-refused), 578 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE
+22/tcp   open  ssh
+7777/tcp open  cbt
+
+# Nmap done at Fri Aug 28 07:55:24 2026 -- 1 IP address (1 host up) scanned in 61.89 seconds

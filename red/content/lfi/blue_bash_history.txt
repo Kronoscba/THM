@@ -1,0 +1,6 @@
+echo "Red rules"
+cd
+hashcat --stdout .reminder -r /usr/share/hashcat/rules/best64.rule > passlist.txt
+cat passlist.txt
+rm passlist.txt
+sudo apt-get remove hashcat -y

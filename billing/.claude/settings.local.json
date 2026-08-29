@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rustscan -a 10.67.137.235 --ulimit 5000)",
+      "Bash(nmap:*)",
+      "Bash(sudo nmap:*)",
+      "Bash(httpx:*)",
+      "Bash(whatweb:*)",
+      "Bash(curl:*)",
+      "Bash(export TARGET_IP=\"10.67.137.235\")",
+      "Bash(nuclei_scan --target \"$TARGET_IP\" --severity critical,high,medium --tags magnusbilling,cve,web -o /media/gabi/Data/CTF/THM/billing/nuclei_results.txt)",
+      "Read(//usr/bin/**)",
+      "Read(//opt/**)",
+      "Bash(nuclei -target http://10.67.137.235 -tags magnusbilling,cve -severity critical,high,medium -o /media/gabi/Data/CTF/THM/billing/nuclei_results.txt)",
+      "Bash(nuclei -target http://10.67.137.235/mbilling/ -severity critical,high,medium -o /media/gabi/Data/CTF/THM/billing/nuclei_results.txt)",
+      "Bash(searchsploit magnusbilling:*)",
+      "Bash(searchsploit -m 52170)",
+      "Bash(searchsploit -x 52170)",
+      "Bash(nuclei -target http://10.67.137.235/mbilling/ -t /usr/share/nuclei-templates/vulnerabilities/ -severity critical,high)",
+      "Bash(nuclei -target http://10.67.137.235 -t cves -severity critical,high)",
+      "Bash(nuclei -target http://10.67.137.235/mbilling/ -tags default-login,admin-panel)",
+      "Bash(gobuster dir:*)",
+      "Bash(nuclei:*)",
+      "Bash(xxd)",
+      "Bash(ping:*)",
+      "Bash(timeout 3 bash -c 'echo > /dev/tcp/10.67.137.235/22')",
+      "Bash(timeout 3 bash -c 'echo > /dev/tcp/10.67.137.235/3306')",
+      "Bash(timeout 3 bash -c 'echo > /dev/tcp/10.67.137.235/5038')",
+      "Bash(python3:*)",
+      "Bash(nc:*)"
+    ]
+  }
+}

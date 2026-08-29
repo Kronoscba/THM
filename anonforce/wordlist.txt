@@ -1,0 +1,13 @@
+password
+123456
+admin
+secret
+anonforce
+melodias
+anonymous
+toor
+root
+pass
+test
+qwerty
+letmein

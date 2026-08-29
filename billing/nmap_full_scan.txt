@@ -1,0 +1,21 @@
+# Nmap 7.99 scan initiated Mon Apr 13 21:25:08 2026 as: nmap -sT -sV -sC -p 22,80,3306,5038 -T4 -oN /media/gabi/Data/CTF/THM/billing/nmap_full_scan.txt 10.67.137.235
+Nmap scan report for 10.67.137.235
+Host is up (0.18s latency).
+
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 9.2p1 Debian 2+deb12u6 (protocol 2.0)
+| ssh-hostkey: 
+|   256 21:5f:b0:fd:c8:b9:ac:6a:f2:25:ba:64:58:76:f6:1a (ECDSA)
+|_  256 5a:70:aa:15:7b:44:f0:6e:1d:ce:99:c2:47:66:c1:d8 (ED25519)
+80/tcp   open  http     Apache httpd 2.4.62 ((Debian))
+| http-robots.txt: 1 disallowed entry 
+|_/mbilling/
+|_http-server-header: Apache/2.4.62 (Debian)
+| http-title:             MagnusBilling        
+|_Requested resource was http://10.67.137.235/mbilling/
+3306/tcp open  mysql    MariaDB 10.3.23 or earlier (unauthorized)
+5038/tcp open  asterisk Asterisk Call Manager 2.10.6
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Apr 13 21:25:24 2026 -- 1 IP address (1 host up) scanned in 16.59 seconds

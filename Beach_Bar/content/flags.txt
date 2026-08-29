@@ -1,0 +1,16 @@
+# Beach Bar (Byte Lotus) - THM
+Target: 10.64.132.157
+
+USER flag  (/home/bartender/user.txt):
+THM{y4ml_pl4yl1st_pwns_th3_b34ch}
+
+ROOT flag  (/root/root.txt):
+THM{cr3d3nt14l_r3us3_4t_th3_b34ch_b4r}
+
+Cadena:
+1. /login tenia comentario HTML con creds demo dj:dj
+2. Login -> /dashboard -> /import acepta YAML
+3. /import usa yaml.load(Loader=yaml.Loader) -> RCE (YAML tag !!!python/object/apply)
+4. RCE como bartender (uid 1001)
+5. jukeboxd.service corre como root con --stream-pass SunsetSpritz2024! (visible en ps)
+6. su root con esa contrasena (credential reuse) -> root

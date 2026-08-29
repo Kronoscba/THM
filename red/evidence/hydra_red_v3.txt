@@ -1,0 +1,1 @@
+# Hydra v9.7 run at 2026-07-01 14:32:57 on 10.67.174.191 ssh (hydra -l red -P content/passlist_full.txt -t 2 -f -w 5 -o evidence/hydra_red_v3.txt ssh://10.67.174.191)

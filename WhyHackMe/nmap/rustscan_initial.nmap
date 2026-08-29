@@ -1,0 +1,14 @@
+# Nmap 7.991 scan initiated Fri Aug 28 02:26:30 2026 as: nmap -vvv -p 21,22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.189.146
+Nmap scan report for 10.64.189.146
+Host is up, received syn-ack (0.17s latency).
+Scanned at 2026-08-28 02:26:31 -03 for 10s
+
+PORT   STATE SERVICE REASON  VERSION
+21/tcp open  ftp     syn-ack vsftpd 3.0.3
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug 28 02:26:41 2026 -- 1 IP address (1 host up) scanned in 11.03 seconds

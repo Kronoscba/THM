@@ -1,0 +1,53 @@
+*   Trying 10.66.147.196:80...
+* Established connection to 10.66.147.196 (10.66.147.196 port 80) from 192.168.134.200 port 44774 
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: 10.66.147.196
+> User-Agent: curl/8.21.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: nginx/1.14.0 (Ubuntu)
+< Date: Tue, 07 Jul 2026 04:16:27 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 724
+< Connection: keep-alive
+< X-Powered-By: Express
+< Set-Cookie: token=value; Path=/
+< ETag: W/"2d4-9vv1ycPBiNQXrvbVqqN9dD9MWUM"
+< 
+{ [724 bytes data]
+* Connection #0 to host 10.66.147.196:80 left intact
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>not allowed</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background: url('img/glitch.jpg') no-repeat center center / cover;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function getAccess() {
+        fetch('/api/access')
+          .then((response) => response.json())
+          .then((response) => {
+            console.log(response);
+          });
+      }
+    </script>
+  </body>
+</html>

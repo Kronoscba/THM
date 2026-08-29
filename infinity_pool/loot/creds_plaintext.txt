@@ -1,0 +1,5 @@
+# Fuente: Watchtower /api/config (127.0.0.1:3000) via RCE
+asterisk://FreePBXUCPTemplateCreator:St4yN0t1c3d_2026@127.0.0.1:8080 # FreePBX UCP creds (from /api/config)
+automation_endpoint=http://127.0.0.1:9000
+automation_key=cc_auto_7b3f9a1c4e0d2f6a
+fuente: caller-ID field filtrado en UCP voicemail widget (writeup)

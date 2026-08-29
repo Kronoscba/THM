@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Thu Aug 27 11:53:11 2026 as: nmap -vvv -p 3389,8021 -4 -sV -T3 -oA nmap/rustscan_initial 10.65.178.236 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 3389,8021 -4 -sV -T3 -oA nmap/rustscan_initial 10.65.178.236" start="1787842391" startstr="Thu Aug 27 11:53:11 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="3389,8021"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1787842392"/>
+<taskend task="Ping Scan" time="1787842395" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 0 hosts." time="1787842395"/>
+<taskend task="Parallel DNS resolution of 0 hosts." time="1787842395"/>
+<host><status state="down" reason="no-response" reason_ttl="0"/>
+<address addr="10.65.178.236" addrtype="ipv4"/>
+</host>
+<runstats><finished time="1787842395" timestr="Thu Aug 27 11:53:15 2026" summary="Nmap done at Thu Aug 27 11:53:15 2026; 1 IP address (0 hosts up) scanned in 3.37 seconds" elapsed="3.37" exit="success"/><hosts up="0" down="1" total="1"/>
+</runstats>
+</nmaprun>

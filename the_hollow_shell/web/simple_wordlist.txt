@@ -1,0 +1,13 @@
+admin
+debug
+api
+config
+settings
+upload
+dashboard
+login
+logout
+shell
+hooks
+worker
+static

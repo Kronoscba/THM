@@ -1,0 +1,128 @@
+[cookies-without-secure] [javascript] [info] nahamstore.thm ["session"]
+[cookies-without-httponly] [javascript] [info] nahamstore.thm ["session"]
+[waf-detect:nginxgeneric] [http] [info] http://www.nahamstore.thm
+[waf-detect:nginxgeneric] [http] [info] http://shop.nahamstore.thm
+[waf-detect:nginxgeneric] [http] [info] http://nahamstore-2020.nahamstore.thm
+[waf-detect:apachegeneric] [http] [info] http://nahamstore-2020.nahamstore.thm
+[waf-detect:nginxgeneric] [http] [info] http://stock.nahamstore.thm
+[waf-detect:nginxgeneric] [http] [info] http://marketing.nahamstore.thm
+[waf-detect:nginxgeneric] [http] [info] http://nahamstore.thm
+[xss-fuzz] [http] [medium] http://marketing.nahamstore.thm/?edit-menu-item=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-edit-menu-item%27%29%3E&error=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-error%27%29%3E&post_title=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-post_title%27%29%3E&x=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-x%27%29%3E&down=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-down%27%29%3E&state=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-state%27%29%3E&data=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-data%27%29%3E&auth=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-auth%27%29%3E&themes=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-themes%27%29%3E&captcha=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-captcha%27%29%3E&nickname=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-nickname%27%29%3E&allusers=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-allusers%27%29%3E&color=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-color%27%29%3E&path=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-path%27%29%3E [xss_param="edit-menu-item=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-edit-menu-item%27%29%3E&error=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-error%27%29%3E&post_title=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-post_title%27%29%3E&x=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-x%27%29%3E&down=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-down%27%29%3E&state=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-state%27%29%3E&data=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-data%27%29%3E&auth=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-auth%27%29%3E&themes=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-themes%27%29%3E&captcha=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-captcha%27%29%3E&nickname=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-nickname%27%29%3E&allusers=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-allusers%27%29%3E&color=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-color%27%29%3E&path=%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-path%27%29%3E"]
+[CVE-2023-48795] [javascript] [medium] nahamstore-2020.nahamstore.thm:22 ["Vulnerable to Terrapin"]
+[CVE-2023-48795] [javascript] [medium] shop.nahamstore.thm:22 ["Vulnerable to Terrapin"]
+[CVE-2023-48795] [javascript] [medium] marketing.nahamstore.thm:22 ["Vulnerable to Terrapin"]
+[CVE-2023-48795] [javascript] [medium] nahamstore.thm:22 ["Vulnerable to Terrapin"]
+[CVE-2023-48795] [javascript] [medium] www.nahamstore.thm:22 ["Vulnerable to Terrapin"]
+[CVE-2023-48795] [javascript] [medium] stock.nahamstore.thm:22 ["Vulnerable to Terrapin"]
+[ssh-auth-methods] [javascript] [info] marketing.nahamstore.thm:22 ["["publickey","password"]"]
+[ssh-auth-methods] [javascript] [info] nahamstore-2020.nahamstore.thm:22 ["["publickey","password"]"]
+[ssh-auth-methods] [javascript] [info] nahamstore.thm:22 ["["publickey","password"]"]
+[ssh-auth-methods] [javascript] [info] shop.nahamstore.thm:22 ["["publickey","password"]"]
+[ssh-auth-methods] [javascript] [info] www.nahamstore.thm:22 ["["publickey","password"]"]
+[ssh-auth-methods] [javascript] [info] stock.nahamstore.thm:22 ["["publickey","password"]"]
+[ssh-server-enumeration] [javascript] [info] marketing.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[ssh-server-enumeration] [javascript] [info] nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[ssh-server-enumeration] [javascript] [info] nahamstore-2020.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[ssh-password-auth] [javascript] [info] marketing.nahamstore.thm:22
+[ssh-server-enumeration] [javascript] [info] www.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[ssh-server-enumeration] [javascript] [info] stock.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[ssh-server-enumeration] [javascript] [info] shop.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[ssh-password-auth] [javascript] [info] shop.nahamstore.thm:22
+[ssh-password-auth] [javascript] [info] nahamstore.thm:22
+[ssh-password-auth] [javascript] [info] nahamstore-2020.nahamstore.thm:22
+[ssh-password-auth] [javascript] [info] www.nahamstore.thm:22
+[ssh-password-auth] [javascript] [info] stock.nahamstore.thm:22
+[ssh-sha1-hmac-algo] [javascript] [info] marketing.nahamstore.thm:22
+[ssh-sha1-hmac-algo] [javascript] [info] nahamstore-2020.nahamstore.thm:22
+[ssh-sha1-hmac-algo] [javascript] [info] shop.nahamstore.thm:22
+[ssh-sha1-hmac-algo] [javascript] [info] www.nahamstore.thm:22
+[ssh-sha1-hmac-algo] [javascript] [info] stock.nahamstore.thm:22
+[ssh-sha1-hmac-algo] [javascript] [info] nahamstore.thm:22
+[snmpv3-detect] [javascript] [info] nahamstore.thm:161 ["Enterprise: unknown"]
+[openssh-detect] [tcp] [info] shop.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[openssh-detect] [tcp] [info] nahamstore-2020.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[openssh-detect] [tcp] [info] nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[openssh-detect] [tcp] [info] www.nahamstore.thm:22 ["SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3"]
+[robots-txt-endpoint] [http] [info] http://nahamstore.thm/robots.txt
+[robots-txt] [http] [info] http://nahamstore.thm/robots.txt
+[nginx-eol:version] [http] [info] http://nahamstore-2020.nahamstore.thm ["1.14.0"]
+[nginx-eol:version] [http] [info] http://www.nahamstore.thm ["1.14.0"]
+[nginx-eol:version] [http] [info] http://shop.nahamstore.thm ["1.14.0"]
+[nginx-eol:version] [http] [info] http://stock.nahamstore.thm ["1.14.0"]
+[nginx-version] [http] [info] http://stock.nahamstore.thm ["nginx/1.14.0"]
+[nginx-eol:version] [http] [info] http://marketing.nahamstore.thm ["1.14.0"]
+[nginx-version] [http] [info] http://marketing.nahamstore.thm ["nginx/1.14.0"]
+[nginx-eol:version] [http] [info] http://nahamstore.thm ["1.14.0"]
+[nginx-version] [http] [info] http://nahamstore.thm ["nginx/1.14.0"]
+[http-missing-security-headers:content-security-policy] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:permissions-policy] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:x-frame-options] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:clear-site-data] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:missing-content-type] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:x-content-type-options] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:referrer-policy] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:strict-transport-security] [http] [info] http://stock.nahamstore.thm
+[http-missing-security-headers:strict-transport-security] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:content-security-policy] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:permissions-policy] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:x-frame-options] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:referrer-policy] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:x-content-type-options] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:clear-site-data] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:missing-content-type] [http] [info] http://marketing.nahamstore.thm
+[http-missing-security-headers:permissions-policy] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:x-frame-options] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:clear-site-data] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:strict-transport-security] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:content-security-policy] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:x-content-type-options] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:referrer-policy] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://nahamstore-2020.nahamstore.thm
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:missing-content-type] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:content-security-policy] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:referrer-policy] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:clear-site-data] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:strict-transport-security] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:permissions-policy] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:x-frame-options] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:x-content-type-options] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] http://nahamstore.thm
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] http://nahamstore.thm
+[CVE-2021-31250] [http] [medium] http://nahamstore.thm/if.cgi?redirect=setting.htm&failure=fail.htm&type=ap_tcps_apply&TF_ip=443&TF_submask=0&TF_submask=%22%3E%3Cscript%3Ealert%283CccptaDq3QnLcIZZJqCZZotO7j%29%3C%2Fscript%3E&radio_ping_block=0&max_tcp=3&B_apply=APPLY
+[form-detection] [http] [info] http://nahamstore.thm
+[form-detection] [http] [info] http://nahamstore.thm
+[form-detection] [http] [info] http://nahamstore.thm
+[tech-detect:nginx] [http] [info] http://stock.nahamstore.thm
+[tech-detect:nginx] [http] [info] http://shop.nahamstore.thm
+[tech-detect:nginx] [http] [info] http://nahamstore-2020.nahamstore.thm
+[tech-detect:nginx] [http] [info] http://www.nahamstore.thm
+[tech-detect:bootstrap] [http] [info] http://marketing.nahamstore.thm
+[tech-detect:nginx] [http] [info] http://marketing.nahamstore.thm
+[missing-cookie-samesite-strict] [http] [info] http://nahamstore.thm ["session=35576c340bfde2a99550ed9c5d68d340; expires=Mon, 20-Apr-2026 13:44:18 GMT; Max-Age=3600; path=/"]
+[tech-detect:bootstrap] [http] [info] http://nahamstore.thm
+[tech-detect:nginx] [http] [info] http://nahamstore.thm
+[host-header-injection] [http] [info] http://nahamstore-2020.nahamstore.thm
+[host-header-injection] [http] [info] http://www.nahamstore.thm
+[host-header-injection] [http] [info] http://marketing.nahamstore.thm
+[host-header-injection] [http] [info] http://nahamstore.thm
+[host-header-injection] [http] [info] http://stock.nahamstore.thm
+[host-header-injection] [http] [info] http://shop.nahamstore.thm
+[caa-fingerprint] [dns] [info] marketing.nahamstore.thm
+[caa-fingerprint] [dns] [info] stock.nahamstore.thm
+[caa-fingerprint] [dns] [info] nahamstore.thm
+[caa-fingerprint] [dns] [info] nahamstore-2020.nahamstore.thm
+[caa-fingerprint] [dns] [info] shop.nahamstore.thm
+[caa-fingerprint] [dns] [info] www.nahamstore.thm

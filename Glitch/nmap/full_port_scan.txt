@@ -1,0 +1,10 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-07 01:16 -0300
+Nmap scan report for 10.66.147.196
+Host is up (0.17s latency).
+Not shown: 65534 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.14.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 38.16 seconds

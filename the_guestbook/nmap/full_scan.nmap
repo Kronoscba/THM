@@ -1,0 +1,17 @@
+# Nmap 7.991 scan initiated Sat Aug 29 06:25:45 2026 as: nmap -sC -sV -T4 -Pn --min-rate 5000 -p- -oA nmap/full_scan 10.67.160.50
+Warning: 10.67.160.50 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.67.160.50
+Host is up (0.18s latency).
+Not shown: 57527 closed tcp ports (conn-refused), 8006 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 c4:25:e4:cc:52:f2:80:06:73:5f:04:b6:88:f6:83:7b (ECDSA)
+|_  256 6a:4f:f8:d8:36:e4:95:22:a5:8e:dc:a6:06:53:1a:e7 (ED25519)
+80/tcp open  http    Gunicorn
+|_http-server-header: gunicorn
+|_http-title: Byte Lotus \xE2\x80\x94 Guestbook
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 29 06:26:32 2026 -- 1 IP address (1 host up) scanned in 46.87 seconds

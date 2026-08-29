@@ -1,0 +1,10 @@
+SMB                      10.67.173.11    445    IP-10-67-173-11  [*] Unix - Samba (name:IP-10-67-173-11) (domain:ec2.internal) (signing:False) (SMBv1:False) (Null Auth:True)
+SMB                      10.67.173.11    445    IP-10-67-173-11  [+] ec2.internal\: 
+SMB                      10.67.173.11    445    IP-10-67-173-11  [*] Enumerated shares
+SMB                      10.67.173.11    445    IP-10-67-173-11  Share           Permissions            Remark
+SMB                      10.67.173.11    445    IP-10-67-173-11  -----           -----------            ------
+SMB                      10.67.173.11    445    IP-10-67-173-11  print$                                 Printer Drivers
+SMB                      10.67.173.11    445    IP-10-67-173-11  IPC$                                   IPC Service (ip-10-67-173-11 server (Samba, Ubuntu))
+SMB                      10.67.173.11    445    IP-10-67-173-11  [*] Unix - Samba (name:IP-10-67-173-11) (domain:ec2.internal) (signing:False) (SMBv1:False) (Null Auth:True)
+SMB                      10.67.173.11    445    IP-10-67-173-11  [+] ec2.internal\guest: (Guest)
+SMB                      10.67.173.11    445    IP-10-67-173-11  [-] Error enumerating shares: STATUS_ACCESS_DENIED

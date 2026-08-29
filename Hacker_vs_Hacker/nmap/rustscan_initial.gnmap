@@ -1,0 +1,5 @@
+# Nmap 7.991 scan initiated Thu Aug 27 16:07:42 2026 as: nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.66.171.53
+# Ports scanned: TCP(2;22,80) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.66.171.53 ()	Status: Up
+Host: 10.66.171.53 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.41 ((Ubuntu))/
+# Nmap done at Thu Aug 27 16:07:51 2026 -- 1 IP address (1 host up) scanned in 9.33 seconds

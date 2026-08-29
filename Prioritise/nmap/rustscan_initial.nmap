@@ -1,0 +1,49 @@
+# Nmap 7.991 scan initiated Fri Aug 28 01:04:50 2026 as: nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.172.157
+WARNING: Service 10.64.172.157:80 had already soft-matched rtsp, but now soft-matched sip; ignoring second value
+Nmap scan report for 10.64.172.157
+Host is up, received syn-ack (0.17s latency).
+Scanned at 2026-08-28 01:04:51 -03 for 10s
+
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+80/tcp open  rtsp    syn-ack
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.991%I=7%D=8/28%Time=6A9108EA%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,B15,"HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20c
+SF:harset=utf-8\r\nContent-Length:\x202756\r\n\r\n<!DOCTYPE\x20html>\n<htm
+SF:l\x20lang=\"en\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"u
+SF:tf-8\"\x20/>\n\x20\x20\x20\x20<meta\n\x20\x20\x20\x20\x20\x20name=\"vie
+SF:wport\"\n\x20\x20\x20\x20\x20\x20content=\"width=device-width,\x20initi
+SF:al-scale=1,\x20shrink-to-fit=no\"\n\x20\x20\x20\x20/>\n\n\x20\x20\x20\x
+SF:20<link\n\x20\x20\x20\x20\x20\x20rel=\"stylesheet\"\n\x20\x20\x20\x20\x
+SF:20\x20href=\"\.\./static/css/bootstrap\.min\.css\"\n\x20\x20\x20\x20\x2
+SF:0\x20crossorigin=\"anonymous\"\n\x20\x20\x20\x20/>\n\x20\x20\x20\x20<li
+SF:nk\n\x20\x20\x20\x20\x20\x20rel=\"stylesheet\"\n\x20\x20\x20\x20\x20\x2
+SF:0href=\"\.\./static/css/font-awesome\.min\.css\"\n\x20\x20\x20\x20\x20\
+SF:x20crossorigin=\"anonymous\"\n\x20\x20\x20\x20/>\n\x20\x20\x20\x20<link
+SF:\n\x20\x20\x20\x20\x20\x20rel=\"stylesheet\"\n\x20\x20\x20\x20\x20\x20h
+SF:ref=\"\.\./static/css/bootstrap-datepicker\.min\.css\"\n\x20\x20\x20\x2
+SF:0\x20\x20crossorigin=\"anonymous\"\n\x20\x20\x20\x20/>\n\x20\x20\x20\x2
+SF:0<title>Prioritise</title>\n\x20\x20</head>\n\n\x20\x20<body>\n\x20\x20
+SF:\x20\x20<!--\x20Navigation\x20-->\n\x20\x20\x20\x20<nav\x20class=\"navb
+SF:ar\x20navbar-expand-md\x20navbar-dark\x20bg-dark\">\n\x20\x20\x20\x20\x
+SF:20\x20<div\x20class=\"container\">\n\x20\x20\x20\x20\x20\x20\x20\x20<a\
+SF:x20class=\"navbar-brand\"\x20href=\"/\"><span\x20class=\"\">Prioritise<
+SF:/span></a>\n\x20\x20\x20\x20\x20\x20\x20\x20<button\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20class=\"na")%r(HTTPOptions,69,"HTTP/1\.0\x20200\x
+SF:20OK\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nAllow:\x20HEAD,
+SF:\x20GET,\x20OPTIONS\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,69,
+SF:"RTSP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=utf-8
+SF:\r\nAllow:\x20HEAD,\x20GET,\x20OPTIONS\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,13F,"HTTP/1\.0\x20404\x20NOT\x20FOUND\r\nContent-
+SF:Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20232\r\n\r\n<
+SF:!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x203\.2\x20Final//E
+SF:N\">\n<title>404\x20Not\x20Found</title>\n<h1>Not\x20Found</h1>\n<p>The
+SF:\x20requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20server\.\x2
+SF:0If\x20you\x20entered\x20the\x20URL\x20manually\x20please\x20check\x20y
+SF:our\x20spelling\x20and\x20try\x20again\.</p>\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug 28 01:05:01 2026 -- 1 IP address (1 host up) scanned in 10.82 seconds

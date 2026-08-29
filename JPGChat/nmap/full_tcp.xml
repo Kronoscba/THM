@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Wed Aug 26 21:05:02 2026 as: nmap -p- -sV -T4 -Pn -&#45;min-rate 5000 -oA nmap/full_tcp 10.64.159.126 -->
+<nmaprun scanner="nmap" args="nmap -p- -sV -T4 -Pn -&#45;min-rate 5000 -oA nmap/full_tcp 10.64.159.126" start="1787789102" startstr="Wed Aug 26 21:05:02 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1787789102" endtime="1787789131"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.64.159.126" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65478">
+<extrareasons reason="conn-refused" count="65478" proto="tcp" ports="1-21,23-1239,1241-1454,1456-1470,1472-2999,3001-3196,3198-4661,4663-5648,5650-5909,5911-6102,6104-6747,6749-7707,7709-7934,7936-8211,8213-9040,9042-15626,15628-16451,16453-18482,18484-19004,19006-19724,19726-20149,20151-20454,20456-20954,20956-22626,22628-24597,24599-26001,26003-26231,26233-27114,27116-28798,28800-29358,29360-29429,29431-30259,30261-31709,31711-34826,34828-40492,40494-41682,41684-42516,42518-42931,42933-44498,44500-44618,44620-44866,44868-45034,45036-45265,45267-46872,46874-47342,47344-52124,52126-52515,52517-53446,53448-54112,54114-54398,54400-56159,56161-56710,56712-59003,59005-59613,59615-61805,61807-62240,62242-63488,63490-65535"/>
+</extraports>
+<extraports state="filtered" count="55">
+<extrareasons reason="no-response" count="55" proto="tcp" ports="1240,1455,1471,3197,4662,5649,5910,6103,6748,7708,7935,8212,9041,15627,16452,18483,19005,19725,20150,20455,20955,22627,24598,26002,26232,27115,28799,29359,29430,30260,31710,34827,40493,41683,42517,42932,44499,44619,44867,45035,45266,46873,47343,52125,52516,53447,54113,54399,56160,56711,59004,59614,61806,62241,63489"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ppp" servicefp="SF-Port3000-TCP:V=7.991%I=7%D=8/26%Time=6A8F7F4A%P=x86_64-pc-linux-gnu%r(NULL,E2,&quot;Welcome\x20to\x20JPChat\nthe\x20source\x20code\x20of\x20this\x20service\x20can\x20be\x20found\x20at\x20our\x20admin&apos;s\x20github\nMESSAGE\x20USAGE:\x20use\x20\[MESSAGE\]\x20to\x20message\x20the\x20\(currently\)\x20only\x20channel\nREPORT\x20USAGE:\x20use\x20\[REPORT\]\x20to\x20report\x20someone\x20to\x20the\x20admins\x20\(with\x20proof\)\n&quot;)%r(GenericLines,E2,&quot;Welcome\x20to\x20JPChat\nthe\x20source\x20code\x20of\x20this\x20service\x20can\x20be\x20found\x20at\x20our\x20admin&apos;s\x20github\nMESSAGE\x20USAGE:\x20use\x20\[MESSAGE\]\x20to\x20message\x20the\x20\(currently\)\x20only\x20channel\nREPORT\x20USAGE:\x20use\x20\[REPORT\]\x20to\x20report\x20someone\x20to\x20the\x20admins\x20\(with\x20proof\)\n&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="172551" rttvar="361" to="173995"/>
+</host>
+<runstats><finished time="1787789131" timestr="Wed Aug 26 21:05:31 2026" summary="Nmap done at Wed Aug 26 21:05:31 2026; 1 IP address (1 host up) scanned in 29.33 seconds" elapsed="29.33" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

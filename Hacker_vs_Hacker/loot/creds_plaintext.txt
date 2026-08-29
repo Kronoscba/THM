@@ -1,0 +1,1 @@
+lachlan:thisistheway123   # user shell, from /home/lachlan/.bash_history (passwd change)

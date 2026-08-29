@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Fri Aug 28 06:40:51 2026 as: nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.67.181.157 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.67.181.157" start="1787910051" startstr="Fri Aug 28 06:40:51 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1787910051"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.67.181.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1787910051" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1787910051"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1787910052"/>
+<taskbegin task="Connect Scan" time="1787910052"/>
+<taskend task="Connect Scan" time="1787910052" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1787910052"/>
+<taskend task="Service scan" time="1787910059" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1787910059"/>
+<taskend task="NSE" time="1787910060"/>
+<taskbegin task="NSE" time="1787910060"/>
+<taskend task="NSE" time="1787910060"/>
+<host starttime="1787910052" endtime="1787910060"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.67.181.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.13" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<times srtt="179936" rttvar="101366" to="585400"/>
+</host>
+<runstats><finished time="1787910060" timestr="Fri Aug 28 06:41:00 2026" summary="Nmap done at Fri Aug 28 06:41:00 2026; 1 IP address (1 host up) scanned in 9.64 seconds" elapsed="9.64" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

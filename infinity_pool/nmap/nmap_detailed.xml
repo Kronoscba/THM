@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Sat Aug 29 03:57:56 2026 as: nmap -sC -sV -p 22,80 -T4 -oA nmap/nmap_detailed 10.66.149.92 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p 22,80 -T4 -oA nmap/nmap_detailed 10.66.149.92" start="1787986676" startstr="Sat Aug 29 03:57:56 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="2" services="22,80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.66.149.92" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1787986677" endtime="1787986691"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.66.149.92" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="9.6p1 Ubuntu 3ubuntu13.18" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:9.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 d6:6d:15:c7:55:55:81:f5:a3:3a:a5:7f:91:ce:b1:65 (ECDSA)&#xa;  256 5a:ba:3c:27:01:3e:20:44:1f:7e:23:0b:b3:94:e8:c7 (ED25519)"><table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCd/AjaE/rZmw0IzPqdMkdC/chmdHJa2qrZ+K9//rd5z112dL3XHdIFiU1+UT02LrwUUUxB2XU6tl1GjZfJModg=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">d66d15c7555581f5a33aa57f91ceb165</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIOsp1/B0/JCIvUxIRu1flojISiE0Yyf+72B6/O9XJ78E</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">5aba3c27013e20441f7e230bb394e8c7</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Gunicorn" method="probed" conf="10"><cpe>cpe:/a:gunicorn:gunicorn</cpe></service><script id="http-server-header" output="gunicorn"><elem>gunicorn</elem>
+</script><script id="http-title" output="Byte Lotus &amp;mdash; Stay Noticed"><elem key="title">Byte Lotus &amp;mdash; Stay Noticed</elem>
+</script></port>
+</ports>
+<times srtt="181182" rttvar="101982" to="589110"/>
+</host>
+<runstats><finished time="1787986691" timestr="Sat Aug 29 03:58:11 2026" summary="Nmap done at Sat Aug 29 03:58:11 2026; 1 IP address (1 host up) scanned in 15.55 seconds" elapsed="15.55" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

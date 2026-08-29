@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Fri Aug 28 02:26:30 2026 as: nmap -vvv -p 21,22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.189.146 -->
+<nmaprun scanner="nmap" args="nmap -vvv -p 21,22,80 -4 -sV -T3 -oA nmap/rustscan_initial 10.64.189.146" start="1787894790" startstr="Fri Aug 28 02:26:30 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="3" services="21-22,80"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1787894790"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.64.189.146" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1787894790" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1787894790"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1787894791"/>
+<taskbegin task="Connect Scan" time="1787894791"/>
+<taskend task="Connect Scan" time="1787894791" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1787894791"/>
+<taskend task="Service scan" time="1787894799" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1787894799"/>
+<taskend task="NSE" time="1787894800"/>
+<taskbegin task="NSE" time="1787894800"/>
+<taskend task="NSE" time="1787894801"/>
+<host starttime="1787894791" endtime="1787894801"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.64.189.146" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.9" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service></port>
+</ports>
+<times srtt="167877" rttvar="72407" to="457505"/>
+</host>
+<runstats><finished time="1787894801" timestr="Fri Aug 28 02:26:41 2026" summary="Nmap done at Fri Aug 28 02:26:41 2026; 1 IP address (1 host up) scanned in 11.03 seconds" elapsed="11.03" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

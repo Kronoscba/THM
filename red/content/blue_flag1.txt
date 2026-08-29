@@ -1,0 +1,7 @@
+Warning: Permanently added '10.64.146.176' (ED25519) to the list of known hosts.
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+THM{Is_thAt_all_y0u_can_d0_blU3?}
+---
+sup3r_p@s$w0rd!
